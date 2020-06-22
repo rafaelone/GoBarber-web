@@ -6,8 +6,8 @@ import ResetPassword from '.';
 import api from '../../services/api';
 
 const mockedHistoryPush = jest.fn();
-const mockedAddToast = jest.fn();
 const mockedLocationSearch = jest.fn();
+const mockedAddToast = jest.fn();
 
 const apiMock = new MockedAdapter(api);
 
