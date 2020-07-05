@@ -26,7 +26,6 @@ const ForgotPassword: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
   const { addToast } = useToast();
-  const history = useHistory();
 
   const handleSubmit = useCallback(
     async (data: ForgotPasswordFormData) => {
@@ -46,7 +45,6 @@ const ForgotPassword: React.FC = () => {
         await api.post('/password/forgot', {
           email: data.email,
         });
-
         addToast({
           type: 'success',
           title: 'E-mail de recuperação enviado',

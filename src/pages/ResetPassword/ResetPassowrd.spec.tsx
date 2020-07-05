@@ -114,11 +114,6 @@ describe('Reset Password Page', () => {
 
     await wait(() => {
       expect(mockedHistoryPush).not.toHaveBeenCalledWith('/');
-      expect(mockedAddToast).not.toHaveBeenNthCalledWith(
-        expect.objectContaining({
-          type: 'error',
-        }),
-      );
     });
   });
 });
